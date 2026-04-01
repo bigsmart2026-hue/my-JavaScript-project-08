@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Keyboard Tracker</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-10">
+
+<p id="keyDisplay" class="text-xl">
+Last key pressed: None
+</p>
+
+<script>
+
+const display = document.getElementById("keyDisplay");
+
+document.addEventListener("keydown", function(event){
+
+  display.textContent = "Last key pressed: " + event.key;
+
+});
+
+</script>
+
+</body>
+</html>
