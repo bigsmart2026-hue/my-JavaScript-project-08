@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Character Counter</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-10 space-y-4">
+
+<textarea id="textArea" class="border p-3 w-80 h-32" placeholder="Start typing..."></textarea>
+
+<p id="counter">Characters: 0</p>
+
+<script>
+
+const textarea = document.getElementById("textArea");
+const counter = document.getElementById("counter");
+
+textarea.addEventListener("input", function(event){
+
+  const length = event.target.value.length;
+
+  counter.textContent = "Characters: " + length;
+
+});
+
+</script>
+
+</body>
+</html>
