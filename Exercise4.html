@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Form Validation</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-10 space-y-4">
+
+<form id="myForm" class="space-x-2">
+  <input 
+    id="nameInput"
+    type="text"
+    placeholder="Enter your name"
+    class="border p-2 rounded"
+  >
+
+  <button class="bg-blue-500 text-white px-4 py-2 rounded">
+    Submit
+  </button>
+</form>
+
+<p id="message" class="text-lg"></p>
+
+<script>
+
+const form = document.getElementById("myForm");
+const input = document.getElementById("nameInput");
+const message = document.getElementById("message");
+
+form.addEventListener("submit", function(event){
+
+  // prevent page reload
+  event.preventDefault();
+
+  const name = input.value.trim();
+
+  if(name === ""){
+    message.textContent = "Name is required";
+    message.classList.add("text-red-500");
+  } 
+  else{
+    message.textContent = "Welcome, " + name + "!";
+    message.classList.remove("text-red-500");
+  }
+
+});
+
+</script>
+
+</body>
+</html>
