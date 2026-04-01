@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click Counter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-10 space-y-4">
+
+<button id="clickBtn" class="bg-blue-500 text-white px-4 py-2 rounded">
+  Click Me
+</button>
+
+<p id="result">You have clicked 0 times</p>
+
+<script>
+
+let count = 0;
+
+const button = document.getElementById("clickBtn");
+const result = document.getElementById("result");
+
+button.addEventListener("click", function(){
+
+  count++;
+
+  result.textContent = "You have clicked " + count + " times";
+
+});
+
+</script>
+
+</body>
+</html>
