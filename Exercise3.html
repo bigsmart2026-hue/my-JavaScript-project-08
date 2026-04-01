@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-10 space-x-4 " >
+
+<button id="redBtn" class="bg-red-500 text-white px-4 py-2 rounded">
+Red
+</button>
+
+<button id="greenBtn" class="bg-green-500 text-white px-4 py-2 rounded">
+Green
+</button>
+
+<button id="blueBtn" class="bg-blue-500 text-white px-4 py-2 rounded">
+Blue
+</button>
+
+<script>
+
+const redBtn = document.getElementById("redBtn");
+const greenBtn = document.getElementById("greenBtn");
+const blueBtn = document.getElementById("blueBtn");
+
+redBtn.addEventListener("click", function(){
+document.body.style.backgroundColor = "red";
+});
+
+greenBtn.addEventListener("click", function(){
+document.body.style.backgroundColor = "green";
+});
+
+blueBtn.addEventListener("click", function(){
+document.body.style.backgroundColor = "blue";
+});
+
+</script>
+
+</body>
+</html>
